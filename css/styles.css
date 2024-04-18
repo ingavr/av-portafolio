@@ -1,0 +1,878 @@
+*,
+*::before,
+*::after {
+    
+    --white:hsl(0, 0%, 100%);
+    --purple-1: #7f00ff;
+    --purple-2: #4C2E8C;
+    --purple-3: #3E2F73;
+    --purple-4: #100F40;
+    --purple-: #090A26;
+    --font-family: 'Poppins', sans-serif, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: var(--purple-2);
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.font{
+    font-family: var(--font-family);
+}
+
+
+
+
+
+
+/* header */
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #090A26;
+    height: 80px;
+    padding: 0 25px;
+   
+}
+
+ 
+
+.header_logo{
+    width: 35px;
+    
+}
+
+.open__menu{
+    background-image: url(../images/nav__bar/menu-fries-svgrepo-com.svg);
+    padding-right: 15px;
+
+
+}
+
+.open__menu:hover, .close__menu:hover{
+    background-color: #7f00ff;
+    transition: 0.5;
+}
+
+.icon__btn__nav{
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-size:35px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px 15px 0 20%;
+    align-items: end;
+    backdrop-filter: blur(15px);
+    background: rgba(41,41,41,.3);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+
+    transition-duration: 1s;
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 1s;
+}
+
+
+.close__menu{
+    background-image: url(../images/nav__bar/close.svg);
+    
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+}
+
+.a{
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+.active{
+    color:#7f00ff;
+}
+
+.a:hover{
+    color: #7f00ff;
+}
+
+
+/* inicio */
+.inicio{
+    background-image: url(../images/background/layered-steps-haikei.svg);
+    background-size: cover;
+
+}
+.inicio_content{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.inicio_title_btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inicio_title{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.font__end{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #7f00ff;
+}
+.lema{
+    margin-top: 20px;
+    font-size: 0.95em;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+
+
+.btn_cv{
+    width: 185px;
+    height: 40px;
+    border-radius: 50px;
+    border: solid 2px #7f00ff;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn_cv:hover{
+    background-color: #7f00ff;
+    
+    transition:1s ;
+}
+.btn_content{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.icon_v{
+    font-size: 1.5em;
+}
+
+.description_btn{
+    font-size: 0.90em;
+}
+
+.cv{
+    font-weight: 600;
+
+}
+
+.icon__social{
+    display: flex;
+    font-size: 30px;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social:hover{
+    color: #7f00ff;
+}
+.image_av_inicio{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* sobre mi */
+
+.container_sobre_mi{
+    width: 250px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(52, 39, 84, 0.3);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre_mi{
+    background-color: #100F40;
+    
+}
+
+
+.titles{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+
+.sobre_mi_description{
+    font-size: 0.90em;
+    
+    text-transform:uppercase;
+    font-weight: 200;
+    line-height: 20px;
+}
+
+.color{
+    color: var(--purple-1);
+    font-weight: 600;
+}
+
+
+
+/* habilidades */
+.habilidades{
+    background-image: url(../images/background/stacked-steps-haikei\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.container_habilidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.skill__icon__container{
+    width: 130px;
+    height: 130px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    background: rgba(38, 38, 38, 0.202);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill__icon{
+    font-size: 50px;
+    text-align: center;
+}
+
+.javascripts:hover, .html:hover{
+    color:rgb(255, 191, 0);
+    transition: 1s;
+}
+
+.css:hover{
+    color:rgb(55, 0, 255);
+    transition: 1s;
+}
+
+.react:hover{
+    color:rgb(0, 179, 255);
+    transition: 1s;
+}
+
+.git:hover{
+    color:rgb(227, 94, 46);
+    transition: 1s;
+}
+
+.github:hover{
+    color:rgb(0, 0, 0);
+    transition: 1s;
+}
+.name__skill{
+    font-size: 0.90em;
+    font-weight: 400;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+} 
+
+/* formacion */
+
+.container_formacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.formaciones__icon__container{
+    width: 290px;
+    height: 290px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    background: rgba(41,41,41,.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-transform: capitalize;
+    line-height: 20px;
+}
+
+
+.logo__formacion{
+    width: 150px;
+}
+
+
+.title__formacion{
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
+
+/* portafolio */
+.portafolio{
+    background-image: url(../images/background/);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 40px; 
+}
+
+.proyecto{
+    width: 290px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(41,41,41,.3);
+    flex-wrap: wrap; 
+
+}
+
+.image_project{
+    width: 100%;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}   
+
+.title_project{
+    margin-top: 20px;
+    font-weight: 600;
+
+}
+
+.description_project{
+    padding: 20px;
+    text-align: left;
+}
+
+.icon_project{
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    font-size: 25px;
+    
+}
+
+/* contacto */
+.formcontato{
+    background-image: url(../images/background/layered-steps-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form__contato{
+    width: 250px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(41,41,41,.3);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.formcontato__subtext{
+    margin-bottom: 20px;
+    
+}
+
+.formcontato__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+::placeholder{
+    color: white;
+}
+.formcontato__input,.formcontato__textarea{
+    width: 240px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #100F40;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+
+.formcontato__input:focus,.formcontato__textarea:focus{
+    outline: none;
+    border-bottom: 2px solid var(--purple-1);
+    
+}   
+
+
+
+.formcontato__textarea{
+    height: 140px;
+}
+
+
+/* footer */
+hr{
+    border: 0.1px solid #7f00ff ;
+    margin: 0;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #100F40;
+}
+
+.attribution {
+    margin: 30px;
+    text-transform: capitalize;
+    font-size: 1em;
+    text-align: center; 
+}
+
+.attribution a {
+    color: #7f00ff;
+    text-decoration:underline;
+}
+
+@media screen and (min-width:767px) and (max-width:1023px){
+
+    .inicio_content{
+        
+        flex-direction: row;
+    }
+
+    .inicio_title_btn{
+        align-items:flex-start;
+        margin-right: 50px;
+    }
+
+    .inicio_title{
+        text-align: left;
+    }
+
+    .font__end{
+        text-align: left;
+    }
+
+
+    .lema{
+        font-size: 1.2em;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .image_av_inicio{
+        width: 270px;
+        
+    }
+
+    .icon__social{
+        font-size: 2.5em;
+        gap: 25px;
+    }
+
+    .attribution{
+        font-size: 1.5em;
+    }
+   
+
+    /* sobre mi */
+
+    .sobre_mi{
+        height: 650px;
+    }
+    .titles{
+        font-size: 2em;
+    }
+
+    .container_sobre_mi{
+        width: 600px;
+        padding: 50px 30px;
+        
+    }
+
+    .sobre_mi_description{
+        font-size: 1.2em;
+        text-transform:uppercase;
+        font-weight: 200;
+        line-height: 20px;
+    }
+
+    .contactame{
+        font-size: 1.2em;
+    }
+
+    .icon_cv{
+        font-size: 1.5em;
+    }
+
+    /* habilidades */
+
+    .habilidades{
+        height: 950px;
+    }
+
+    .skill__icon__container{
+        width: 260px;
+        height: 260px;
+    
+    }
+
+    .skill__icon{
+        font-size: 100px;
+        
+    }
+
+    .name__skill{
+        font-size: 1.5em;
+    }
+
+    /* formaciones */
+
+    .formaciones{
+        height: 800px;
+    }
+
+    .formaciones__icon__container{
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .logo__formacion{
+        width: 180px;
+    }
+
+    .title__formacion{
+        font-size: 1.2em;
+    }
+
+    .año__formacion{
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    /* portafolio */
+
+    .proyecto{
+        width: 325px
+    }
+
+    .title_project{
+        font-size: 1.2em;
+        
+    }
+
+    .description_project{
+        font-size: 1.2em;
+    }
+
+    .icon_project{
+        
+        font-size: 35px;
+        
+    }
+
+    /* contacto */
+
+    .form__contato{
+        width: 600px;
+        font-size: 1.2em;
+        padding: 40px;
+    }
+
+    .formcontato__input,.formcontato__textarea{
+        width: 590px;
+        padding: 10px;
+        
+        
+    }
+  
+    
+}
+
+
+
+@media screen and (min-width:1024px){
+    /* heder */
+    .header{
+        
+        padding: 0 35px;
+       
+    }
+
+    .open__menu{
+        display: none;
+    
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        gap: 2em;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        align-items:flex-start;
+        backdrop-filter: none;
+        background: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    
+        transition-duration: 1s;
+    }
+
+    .nav__list{
+        
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .close__menu{
+        display: none;
+        
+    }
+
+    /* inicio */
+    .inicio{
+        height: 800px;
+        
+    }
+
+    .inicio_content{
+        padding-top: 50px;
+        flex-direction: row;
+        gap: 200px;
+    }
+
+    .inicio_title_btn{
+        align-items:flex-start;
+        
+    }
+
+    .inicio_title{
+        text-align: left;
+        font-size: 4em;
+    }
+
+    .font__end{
+        text-align: left;
+        font-size: 4em;
+    }
+
+
+    .lema{
+        font-size: 1.5em;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .btn_cv{
+        width: 200px;
+        height: 60px;
+        
+    }
+    .icon_v{
+        font-size: 2em;
+    }
+
+    .description_btn{
+        font-size: 1em;
+    }
+
+    .image_av_inicio{
+        width: 400px;
+        
+    }
+
+    .icon__social{
+        font-size: 2.5em;
+        gap: 25px;
+        margin-top: 35px;
+    }
+
+    .attribution{
+        font-size: 1.5em;
+    }
+   
+
+    /* sobre mi */
+
+    .sobre_mi{
+        height: 650px;
+    }
+    .titles{
+        font-size: 2em;
+    }
+
+    .container_sobre_mi{
+        width: 600px;
+        padding: 50px 30px;
+        
+    }
+
+    .sobre_mi_description{
+        font-size: 1.2em;
+        text-transform:uppercase;
+        font-weight: 200;
+        line-height: 20px;
+    }
+
+    .contactame{
+        font-size: 1.2em;
+    }
+
+    .icon_cv{
+        font-size: 1.5em;
+    }
+
+    /* habilidades */
+
+    .habilidades{
+        height: 950px;
+    }
+
+    .skill__icon__container{
+        width: 260px;
+        height: 260px;
+    
+    }
+
+    .skill__icon{
+        font-size: 100px;
+        
+    }
+
+    .name__skill{
+        font-size: 1.5em;
+    }
+
+    /* formaciones */
+
+    .formaciones{
+        height: 800px;
+    }
+
+    .formaciones__icon__container{
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .logo__formacion{
+        width: 180px;
+    }
+
+    .title__formacion{
+        font-size: 1.2em;
+    }
+
+    .año__formacion{
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    /* portafolio */
+
+    .proyecto{
+        width: 325px
+    }
+
+    .title_project{
+        font-size: 1.2em;
+        
+    }
+
+    .description_project{
+        font-size: 1.2em;
+    }
+
+    .icon_project{
+        
+        font-size: 35px;
+        
+    }
+
+    /* contacto */
+
+    .form__contato{
+        width: 600px;
+        font-size: 1.2em;
+        padding: 40px;
+    }
+
+    .formcontato__input,.formcontato__textarea{
+        width: 590px;
+        padding: 10px;
+        
+        
+    }
+}
